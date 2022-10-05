@@ -1,0 +1,363 @@
+body {
+    background: #171717;
+    margin: 0;
+    padding: 0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-auto-rows: minmax(2em, auto);
+    grid-template-areas:
+        "head head head head head"
+        "home home home home home"
+        "about about about about about"
+        "skills skills skills skills skills"
+        "cont cont cont cont cont"
+        "foot foot foot foot foot"
+    ;
+    grid-gap: 1rem;
+}
+
+.box {
+
+    color: #fff;
+    text-align: center;
+}
+
+.head {
+    grid-area: head;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em 1em;
+}
+
+.home {
+    grid-area: home;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin-top: 3em ;
+}
+
+.home .text h1 {
+    color: #DA0037;
+    font-size: 3em;
+}
+
+.home .text p {
+
+    font-size: 2em;
+}
+
+.home .text button {
+    background: #DA0037;
+    color: #fff;
+    border: none;
+    padding: 1em;
+
+}
+
+.home .text button:hover {
+    letter-spacing: 0.2em;
+    color: #ffffff;
+    background-color: #ff0040;
+    box-shadow: 0em 0em 0.2em 0.2em #DA0037;
+    cursor: pointer;
+}
+
+
+.home img {
+    width: 50%;
+    height: 98%;
+    border: #DA0037 solid 0.15em;
+    margin: 0.5em 0.5em;
+}
+
+.home img:hover {
+    box-shadow: 0em 0em 1em 0.2em rgb(84, 238, 215),
+    0em 0em 2em 0.2em #DA0037, 
+    0em 0em 2em 0.2em #DA0037, 
+    0em 0em 2em 0.2em #DA0037;
+    margin: 0.6em 0.6em;
+}
+
+.about {
+    grid-area: about;
+}
+
+.about h1 {
+    color: #DA0037;
+    margin: 2em 0;
+}
+
+.about h1::after {
+    content: "________________";
+
+}
+
+.about h1::before {
+    content: "________________";
+
+}
+
+.skills {
+    grid-area: skills;
+}
+
+.skills .title {
+    color: #DA0037;
+    margin: 2em 0;
+}
+
+.skills .title::after {
+    content: "________________";
+
+}
+
+.skills .title::before {
+    content: "________________";
+
+}
+
+.skills-c {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+}
+
+.skills-c .skill {
+    margin:0 1em;
+}
+
+.skills-c .skill h1 {
+    color: #DA0037;
+    font-size: 1em;
+    text-align: left;
+    margin-left: 1em;
+}
+.skills-c .skill .border {
+    border: #fff solid 0.1em;
+}
+
+.skills-c .skill span {
+    background: #DA0037;
+    height: 50%;
+    width: 90%;
+    display: block;
+    
+}
+
+.footer {
+    grid-area: foot;
+}
+
+.contact {
+    grid-area: cont;
+    text-align: center;
+}
+.contact h1{
+    color: #DA0037;
+    margin: 2em 0;
+    font-size: 2em;
+}
+.contact h1::after {
+    content: "________________";
+
+}
+
+.contact h1::before {
+    content: "________________";
+
+}
+
+p {
+    color: #fff
+}
+
+#logo {
+    height: 60%;
+    width: 8%;
+    margin: 0 0.5em;
+    color: #DA0037;
+}
+
+.list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    margin-right: 1.1em;
+  
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+a:hover {
+    color: #DA0037;
+}
+
+a:active {
+    color: #DA0037;
+}
+legend{
+    color: rgb(84, 238, 215);
+}
+form fieldset input{
+border: #DA0037 solid 0.2em;
+}
+
+form fieldset button{
+    border: rgb(84, 238, 215)solid 0.2em;
+    color: rgb(84, 238, 215);
+    background-color: transparent;
+    padding: 0.5em 0.5em;
+    letter-spacing: 0.2em;
+    }
+    .footer img{
+        height:2em ;width: 2em;
+        margin: 1em 1em;
+    }
+/*skills css*/
+@media only screen and (max-width: 600px) {
+    .container {
+        display: grid;
+        grid-auto-rows: minmax(2em, auto);
+        grid-template-areas:
+            "head head head "
+            "home home home "
+            "about about about "
+            "skills skills skills "
+            "cont cont cont "
+            "foot foot foot "
+        ;
+        grid-gap: 1rem;
+    }
+    
+    .head {
+        grid-area: head;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 1em;
+    }
+    .home {
+        grid-area: home;
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        justify-items: center;
+        align-items: center;
+        margin-top: 3em ;
+    }
+    .home .text{
+        grid-row-start:2 ;
+        grid-row-end:3 ;
+    }
+    .home .text h1 {
+        color: #DA0037;
+        font-size: 3em;
+    }
+    
+    .home .text p {
+    
+        font-size: 1.5em;
+    }
+    .home img {
+        grid-row-start:1 ;
+        grid-row-end:2 ;
+       
+        width: 50%;
+        height: 80%;
+        border: #DA0037 solid 0.15em;
+        margin: 0.5em 0.5em;
+    }
+    .about h1 {
+        color: #DA0037;
+        margin: 1em 0;
+    }
+    .about p{
+        font-size: 5vw;
+       
+    }
+    
+    .about h1::after {
+        content: "__________";
+    
+    }
+    
+    .about h1::before {
+        content: "__________";
+    
+    }
+    .skills .title {
+        color: #DA0037;
+        margin: 1em 0;
+    }
+    
+    .skills .title::after {
+        content: "__________";
+    
+    }
+    
+    .skills .title::before {
+        content: "__________";
+    
+    }
+    
+    .skills-c {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        align-items: center;
+    }
+    
+    .skills-c .skill {
+        margin:0 1em;
+    }
+    
+    .skills-c .skill h1 {
+        color: rgb(84, 238, 215);
+        font-size: 1em;
+        text-align: left;
+        margin-left: 1em;
+    }
+    .skills-c .skill .border {
+        border: #fff solid 0.1em;
+    }
+    
+    .skills-c .skill span {
+        background: #DA0037;
+        height: 50%;
+        width: 80%;
+        display: block;
+        
+    }
+    .contact h1{
+        color: #DA0037;
+        margin: 1em 0;
+        font-size: 2em;
+    }
+    .contact h1::after {
+        content: "_______";
+    
+    }
+    
+    .contact h1::before {
+        content: "_______";
+    
+    }
+    
+    p {
+        color: #fff
+    }
+  }
